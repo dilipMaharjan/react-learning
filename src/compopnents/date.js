@@ -3,7 +3,9 @@ import React,{Component} from 'react';
 class Date extends Component{
 render(){
   return(
-    <p>{this.props.message}</p>
+    <div>
+    <p>{this.props.hello} {this.props.name}!{this.props.word}</p>
+    </div>
   );
 }
 }

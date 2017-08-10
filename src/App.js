@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div>
         <h1>{this.state.firstname} {this.state.lastname}</h1>
-        <Date message="Hello props"/>
+        <Date hello="Hello" name="Dilip" word="You are doing fine, dude!"/>
       </div>
 
     );
