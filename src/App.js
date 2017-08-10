@@ -13,7 +13,7 @@ class App extends Component {
   }
   componentDidMount() {
     console.log("called after the rednering the html");
-      this.setState({firstname: "Philip"});
+    this.setState({firstname: "Philip"});
   }
   componentWillMount() {
     console.log("called before rendering the html");
@@ -28,12 +28,16 @@ class App extends Component {
     return (
       <div>
         <h1>{this.state.firstname} {this.state.lastname}</h1>
+        <Cat greeting="hi!"/>
         <Person hello="Hello" name="Dilip" word="You are doing fine, dude!"/>
-        <Form />
+        <Form/>
       </div>
 
     );
   }
+}
+function Cat(props) {
+  return <h1>{props.greeting} Cats</h1>;
 }
 
 export default App;
