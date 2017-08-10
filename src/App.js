@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Date from "./compopnents/date";
+import Person from "./compopnents/person";
 class App extends Component {
   constructor() {
     super();
@@ -12,6 +12,7 @@ class App extends Component {
   }
   componentDidMount() {
     console.log("called after the rednering the html");
+      this.setState({firstname: "Philip"});
   }
   componentWillMount() {
     console.log("called before rendering the html");
@@ -23,11 +24,10 @@ class App extends Component {
     console.log("called after component is removed from dom");
   }
   render() {
-    this.setState({firstname: "Philip"});
     return (
       <div>
         <h1>{this.state.firstname} {this.state.lastname}</h1>
-        <Date hello="Hello" name="Dilip" word="You are doing fine, dude!"/>
+        <Person hello="Hello" name="Dilip" word="You are doing fine, dude!"/>
       </div>
 
     );
