@@ -9,12 +9,16 @@ class Person extends Component{
   }
   writeConsole(){
 console.log("Get it working dude");
+this.setState({
+  isLoggedIn:!this.state.isLoggedIn
+});
   }
 render(){
+  const isLoggedIn=this.state.isLoggedIn;
   return(
     <div>
-    <p>{this.props.hello} {this.props.name} {this.props.word}</p>
-    <button onClick={this.writeConsole.bind()}>Write Console</button>
+    <p>{isLoggedIn?this.props.hello:this.props.name+this.props.word}</p>
+    <button onClick={this.writeConsole.bind(this)}>Write Console</button>
     </div>
   );
 }
