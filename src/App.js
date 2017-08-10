@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from "./compopnents/person";
+import Form from "./compopnents/form";
 class App extends Component {
   constructor() {
     super();
@@ -28,6 +29,7 @@ class App extends Component {
       <div>
         <h1>{this.state.firstname} {this.state.lastname}</h1>
         <Person hello="Hello" name="Dilip" word="You are doing fine, dude!"/>
+        <Form />
       </div>
 
     );
