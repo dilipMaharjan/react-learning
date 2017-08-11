@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    console.log("called after the rednering the html");
+    console.log("called after the rendering the html");
     this.setState({firstname: "Philip"});
   }
   componentWillMount() {
